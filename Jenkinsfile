@@ -5,7 +5,7 @@ pipeline {
         APP_NAME = 'whatshappeing'
         APP_DISPLAY_NAME = 'what\'shappeing'
         APP_VERSION = '1.0.0'
-        PYTHON_EXE = 'python'
+        PYTHON_EXE = 'C:\\Users\\R2D2C3PO\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe'
         INNO_COMPILER = 'C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe'
     }
 
@@ -18,14 +18,14 @@ pipeline {
 
         stage('Setup Python') {
             steps {
-                bat 'python --version'
+                bat '"%PYTHON_EXE%" --version'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install --upgrade pip'
-                bat 'pip install -r requirements.txt'
+                bat '"%PYTHON_EXE%" -m pip install --upgrade pip'
+                bat '"%PYTHON_EXE%" -m pip install -r requirements.txt'
             }
         }
 
