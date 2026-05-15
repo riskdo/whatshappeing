@@ -9,7 +9,7 @@ Compression=lzma
 SolidCompression=yes
 
 [Files]
-Source: "dist\whatshappeing.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\whatshappeing.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\what'shappeing"; Filename: "{app}\whatshappeing.exe"
